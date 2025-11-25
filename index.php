@@ -19,8 +19,8 @@ require_once 'functions.php';
                 <a href="favorites.php">รายการโปรด</a> |
                 <a href="signout.php">ออกจากระบบ</a>
                 <?php else: ?>
-                <a href="signup.php">สมัคร</a> |
-                <a href="signin.php">เข้าสู่ระบบ</a>
+                <a href="auth.php?show=signup">สมัคร</a> |
+                <a href="auth.php?show=signin">เข้าสู่ระบบ</a>
                 <?php endif; ?>
             </nav>
         </header>
