@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- ใช้ styles2.css (ปรับ path ถ้าไฟล์อยู่ในโฟลเดอร์อื่น) -->
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="responsive/styles2.css">
     <style>
         /* กรณีอยากให้ข้อความ error เด่นขึ้น — ถ้า styles2.css ไม่มี */
         .err { color: #b00020; margin: 6px 0; }
@@ -188,7 +188,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="panel left-panel">
             <div class="content">
                 <h3>New here?</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, quaerat repudiandae.</p>
+                    <p>Let's search Anime Together!!, by the way you want some popcorn from me bro??</p>
             <button class="btn transparent" id="sign_up_btn">Sign up</button>
             </div>
             <img src="./undraw_horror-movie_9020.svg" class="image" alt="">
@@ -197,7 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="panel right-panel">
             <div class="content">
             <h3>One of us?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, placeat eum.</p>
+            <p>Let's join our Otaku Group for free!!, just enter the Sign up Form</p>
             <button class="btn transparent" id="sign_in_btn">Sign in</button>
             </div>
             <img src="./undraw_movie-night_pkvp.svg" class="image" alt="">

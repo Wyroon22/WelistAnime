@@ -79,29 +79,27 @@ form.sign_up_form{
 }
 
 .input_field{
+    align-items: center;
     max-width: 380px;
     width: 100%;
-    height: 55px;
-    background-color: #f0f0f0;
-    margin: 10px 0;
-    border-radius: 55px;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    padding: 0.4rem;
+    height: 48px;
+    background-color: #eee;
+    margin: 15px 0;
+    border-radius: 12px;
+    display: flex;
+    padding: 14px 18px;
 }
 
 .input_field i{
-    text-align: center;
-    line-height: 55px;
-    color: #acacac;
-    font-size: 1.1rem;
+    margin-right: 10px;
+    color: #666;
 }
 
 .input_field input{
-    background: none;
+    background: transparent;
     outline: none;
     border: none;
-    line-height: 1;
+    line-height: 6;
     font-weight: 600;
     font-size: 1.1rem;
     color: #333;
