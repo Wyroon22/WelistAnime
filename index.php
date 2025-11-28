@@ -26,7 +26,9 @@ if ($q !== '') {
     <title>Anime Info Finder</title>
 
     <!-- Google font (optional) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap" rel="stylesheet">
 
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -63,8 +65,10 @@ if ($q !== '') {
     <main>
         <section class="search-box" style="margin-top:20px;background:#fff;border-radius:12px;padding:18px;box-shadow:0 8px 24px rgba(24,35,50,0.04);">
             <form action="index.php" method="get" class="search-form" style="display:flex;gap:10px;align-items:center;">
-            <input name="q" placeholder="พิมพ์ชื่ออนิเมะ เช่น Naruto" required value="<?= h($q) ?>" style="flex:1;padding:12px 14px;border-radius:10px;border:1px solid #e6eaef;font-size:1rem">
+            <input name="q" placeholder="พิมพ์ชื่ออนิเมะที่ต้องการค้นหา" required value="<?= h($q) ?>" style="flex:1;padding:12px 14px;border-radius:10px;border:1px solid #e6eaef;font-size:1rem">
             <button type="submit" class="btn">ค้นหา</button>
+
+
         </form>
         <p class="hint" style="margin-top:10px;color:#7b8790">Search powered by Jikan API — เรียกจากฝั่งเซิร์ฟเวอร์</p>
         </section>

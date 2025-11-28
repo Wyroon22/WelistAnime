@@ -171,3 +171,44 @@ nav .muted { color: var(--muted); font-weight:500; }
     .card img{ height:200px }
 }
 
+button.btn {
+    position: relative;
+    padding: 10px 25px;
+    background: #e88b00; /* สีส้ม */
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+}
+
+/* เส้นแสง */
+button.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+    transition: 0.45s;
+}
+
+/* เมื่อ hover → เส้นวิ่งข้ามปุ่ม */
+button.btn:hover::before {
+    left: 100%;
+}
+
+/* เมื่อ hover → ปุ่มสว่างขึ้น + เด้งนิดนึง */
+button.btn:hover {
+    background: #ff9f1c;
+    transform: translateY(-2px);
+}
+
