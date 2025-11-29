@@ -65,12 +65,17 @@ if ($q !== '') {
     <main>
         <section class="search-box" style="margin-top:20px;background:#fff;border-radius:12px;padding:18px;box-shadow:0 8px 24px rgba(24,35,50,0.04);">
             <form action="index.php" method="get" class="search-form" style="display:flex;gap:10px;align-items:center;">
-            <input name="q" placeholder="พิมพ์ชื่ออนิเมะที่ต้องการค้นหา" required value="<?= h($q) ?>" style="flex:1;padding:12px 14px;border-radius:10px;border:1px solid #e6eaef;font-size:1rem">
+            <div class="glow-wrapper">
+            <input name="q" placeholder="พิมพ์ชื่ออนิเมะที่ต้องการค้นหา" 
+            required value="<?= h($q) ?>" class="glow-input">
+            </div>
+
             <button type="submit" class="btn">ค้นหา</button>
 
 
         </form>
-        <p class="hint" style="margin-top:10px;color:#7b8790">Search powered by Jikan API — เรียกจากฝั่งเซิร์ฟเวอร์</p>
+        <br>
+        <p class="hint" style="margin-top:10px;color:#7b8790">Search powered by Jikan API </p>
         </section>
 
         <?php if ($q !== ''): ?>

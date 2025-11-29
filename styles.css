@@ -250,3 +250,55 @@ nav .muted { color: var(--muted); font-weight:500; }
     100% { background-position: 0% 50%; }
 }
 
+/* ====== wrapper ช่องกรอกชื่อเมะ ====== */
+.glow-wrapper {
+    position: relative;
+    display: flex;
+    flex: 1;           /* ให้ยืดเท่าเดิม */
+    border-radius: 12px;
+    z-index: 0;        /* สร้าง stacking context ปลอดภัย */
+    overflow: visible; /* สำคัญ: กัน blur ถูกตัด */
+}
+
+.glow-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border-radius: 18px;
+    background: linear-gradient(
+    45deg,
+    #ff0000, #ff7300, #fff000, #48ff00,
+    #00ffd5, #002bff, #ff00c8, #ff0000
+    ); /* ไม่มี comma เกินตอนท้าย */
+    background-size: 600% 600%;
+    filter: blur(10px);
+    z-index: 0;             /* อยู่บน wrapper แต่ใต้ input */
+    pointer-events: none;
+    animation: glowRun 6s linear infinite;
+    opacity: 1;
+}
+
+
+.glow-input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e6eaef;
+    font-size: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;            /* ต้องสูงกว่า ::before */
+    box-sizing: border-box;
+}
+
+/* ====== animation ====== */
+@keyframes glowRun {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
